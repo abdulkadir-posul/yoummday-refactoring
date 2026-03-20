@@ -1,0 +1,9 @@
+{
+  "host": "127.0.0.1",
+  "port": 1337,
+  "public_dir": "public",
+  "routing": {
+    "cache": "route.cache"
+  },
+  "handlers": "App/Handler"
+}

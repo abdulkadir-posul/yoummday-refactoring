@@ -1,0 +1,20 @@
+services:
+  app:
+    build: .
+    network_mode: host
+    volumes:
+      - .:/app
+      - vendor:/app/vendor
+    command: php src/main.php
+
+  test:
+    build: .
+    volumes:
+      - .:/app
+      - vendor:/app/vendor
+    command: php vendor/bin/phpunit Test
+    profiles:
+      - test
+
+volumes:
+  vendor:
